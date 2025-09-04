@@ -1,0 +1,241 @@
+/* ===== Estilos gerais ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff8f0;
+  color: #333;
+}
+
+header {
+  background: #d35400;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ===== Lista de produtos ===== */
+.menu {
+  display: flex;
+  flex-direction: column; /* força em coluna */
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+}
+
+.produto img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.produto h2 {
+  margin: 10px 0 5px;
+}
+
+.produto p {
+  font-size: 14px;
+  color: #555;
+}
+
+.produto button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #e67e22;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.produto button:hover {
+  background: #d35400;
+}
+
+/* ===== Carrinho fixo no desktop ===== */
+#carrinho {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #f4f4f4;
+  border-left: 2px solid #ccc;
+  padding: 40px;
+  overflow-y: auto;
+  display: block; /* sempre aparece no desktop */
+  z-index: 900;
+}
+
+#carrinho h2 {
+  margin-top: 0;
+}
+
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.item-carrinho span {
+  flex: 1;
+}
+
+.btn-remover {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-remover:hover {
+  background: #c0392b;
+}
+
+.total {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#btn-limpar,
+#btn-concluir {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btn-limpar {
+  background: #2c3e50;
+  color: white;
+}
+
+#btn-limpar:hover {
+  background: #1a252f;
+}
+
+#btn-concluir {
+  background: #27ae60;
+  color: white;
+}
+
+#btn-concluir:hover {
+  background: #1e8449;
+}
+
+/* ===== Tela de confirmação ===== */
+#pedido-confirmado {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#pedido-confirmado .conteudo {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#pedido-confirmado h2 {
+  margin-top: 0;
+  color: #27ae60;
+}
+
+#pedido-confirmado button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#pedido-confirmado button:hover {
+  background: #1a252f;
+}
+
+/* ===== Botão flutuante (mobile) ===== */
+#btn-carrinho-flutuante {
+  display: none; /* só aparece em telas pequenas */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  #carrinho {
+    position: fixed;
+    bottom: 90px; /* acima do botão flutuante */
+    right: 20px;
+    width: 280px;
+    max-height: 70%;
+    background: #f4f4f4;
+    border-left: none;
+    border-top: 2px solid #ccc;
+    padding: 15px;
+    overflow-y: auto;
+    display: none; /* escondido no celular, abre só com botão */
+    border-radius: 10px;
+  }
+
+  #btn-carrinho-flutuante {
+    display: block; /* aparece no celular */
+  }
+}
+
+.geleia-foto{
+  height: 150px;
+}
