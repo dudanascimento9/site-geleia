@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Naturelle</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
       <h1>🍊 La Naturelle</h1>
-      <p>As melhores geleias artesanais da Bahia!</p>
+      <p id="p-header">As melhores geleias artesanais da Bahia!</p>
     </header>
 
     <!-- Lista de produtos -->
     <section class="menu">
       <div class="produto">
         <img
-          src="a795e43ad198ca75c00e329a1c7d431a_XL.jpg"
+          src="imagens/a795e43ad198ca75c00e329a1c7d431a_XL.jpg"
           class="geleia-foto"
           alt="Geleia de Morango"
         />
-        <h2>Geleia de Morango</h2>
-        <p>Ingredientes: morango, açúcar orgânico, limão.</p>
+        <h2 class="font-carrinho">Geleia de Morango</h2>
+        <p>Ingredientes: morango, açúcar orgânico, pectina em pó e limão.</p>
         <button onclick="adicionarCarrinho('Geleia de Morango', 15)">
           Adicionar - R$ 15,00
         </button>
@@ -30,26 +30,26 @@
 
       <div class="produto">
         <img
-          src="Geleia-de-Laranja-com-Pimenta.webp"
-          class="geleia-foto"
-          alt="Geleia de Uva"
+          src="imagens/Geleia-de-Laranja-com-Pimenta.webp"
+          class="geleia-foto-laranja"
+          alt="Geleia de Laranja com Pimenta"
         />
-        <h2>Geleia de Laranja com Pimenta</h2>
-        <p>Ingredientes: uva, açúcar mascavo, limão.</p>
-        <button onclick="adicionarCarrinho('Geleia de Uva', 18)">
+        <h2 class="font-carrinho">Geleia de Laranja com Pimenta</h2>
+        <p>Ingredientes: suco de laranja, açúcar cristal, limão, pimenta dedo-de-moça e pectina em pó.</p>
+        <button onclick="adicionarCarrinho('Geleia de Laranja com Pimenta', 18)">
           Adicionar - R$ 18,00
         </button>
       </div>
 
       <div class="produto">
         <img
-          src="Geleia-de-abacaxi-Essa-Receita-Funciona-6.jpg"
+          src="imagens/Geleia-de-abacaxi-Essa-Receita-Funciona-6.jpg"
           class="geleia-foto"
           alt="Geleia de Amora"
         />
-        <h2>Geleia de Abacaxi</h2>
-        <p>Ingredientes: amora, açúcar orgânico, limão.</p>
-        <button onclick="adicionarCarrinho('Geleia de Amora', 20)">
+        <h2 class="font-carrinho">Geleia de Abacaxi</h2>
+        <p>Ingredientes: abacaxi, açúcar cristal, pectina em pó e limão.</p>
+        <button onclick="adicionarCarrinho('Geleia de Abacaxi', 20)">
           Adicionar - R$ 20,00
         </button>
       </div>
@@ -57,7 +57,7 @@
 
     <!-- Carrinho -->
     <aside id="carrinho">
-      <h2>🛒 Carrinho</h2>
+      <h2 class="font-carrinho">🛒 Carrinho</h2>
       <div id="itens"></div>
       <p class="total">Total: R$ <span id="total">0</span>,00</p>
       <button id="btn-limpar" onclick="limparCarrinho()">
@@ -79,6 +79,46 @@
         <button onclick="fecharConfirmacao()">Fechar</button>
       </div>
     </div>
+
+        <!-- Sobre a Empresa -->
+    <section class="sobre">
+      <img src="imagens/logo-naturelle.jpeg" alt="Logo La Naturelle" class="logo-empresa" />
+      <div class="sobre-texto">
+        <h2 style=" font-family: nexa">Sobre a La Naturelle</h2>
+        <p>
+          A <strong>La Naturelle</strong> nasceu da união de sete amigos com o
+          propósito de oferecer alimentos <strong>saudáveis e naturais</strong>,
+          trazendo sabor e bem-estar para as pessoas.
+        </p>
+        <p>
+          Nossa loja está localizada na <strong>Rua Central, 120</strong>, em um
+          dos bairros mais movimentados de <strong>Alagoinhas – BA</strong>.
+        </p>
+        <p>
+          O lançamento oficial da marca acontecerá no dia
+          <strong>10 de novembro de 2025</strong>, durante a
+          <em>Feira Orgânica de Alagoinhas</em>.
+        </p>
+      </div>
+    </section>
+
+        <!-- Rodapé -->
+    <footer class="footer">
+      <div class="footer-conteudo">
+        <div class="footer-info">
+          <p><strong>CNPJ:</strong> 12.345.678/0001-99</p>
+          <p><strong>Localização:</strong> Rua Central, 120 – Alagoinhas, BA</p>
+          <p>© 2025 La Naturelle. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-contato">
+          <h3>Central de Atendimento</h3>
+          <p>📞 (75) 4002-8922</p>
+          <p>✉️ contato@lanaturelle.com</p>
+          <p>📱 @lanaturelleoficial</p>
+        </div>
+      </div>
+    </footer>
+
 
     <script src="script.js"></script>
   </body>
