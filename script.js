@@ -5,7 +5,7 @@ const telaConfirmacao = document.getElementById("pedido-confirmado");
 const carrinho = document.getElementById("carrinho");
 const btnCarrinho = document.getElementById("btn-carrinho-flutuante");
 
-/* === Adicionar item ao carrinho === */
+/* adicionar item ao carrinho */
 function adicionarCarrinho(produto, preco) {
   const item = document.createElement("div");
   item.classList.add("item-carrinho");
@@ -37,7 +37,7 @@ function adicionarCarrinho(produto, preco) {
   atualizarBadge();
 }
 
-/* === Esvaziar carrinho === */
+/*esvazia o carrinho */
 function limparCarrinho() {
   itensCarrinho.innerHTML = "";
   total = 0;
@@ -45,7 +45,7 @@ function limparCarrinho() {
   atualizarBadge();
 }
 
-/* === Concluir pedido === */
+/*concluir pedido */
 function concluirPedido() {
   if (total === 0) {
     alert("Seu carrinho está vazio!");
@@ -54,17 +54,17 @@ function concluirPedido() {
   telaConfirmacao.style.display = "flex";
   limparCarrinho();
 
-  // ✅ Em vez de esconder o carrinho, a gente garante que ele fica aberto
+  // carrinho fica aberto
   carrinho.style.display = "block"; 
 }
 
 
-/* === Fechar tela de confirmação === */
+/*fechar tela de confirmação */
 function fecharConfirmacao() {
   telaConfirmacao.style.display = "none";
 }
 
-/* === Abrir/fechar carrinho no celular === */
+/*abrir/fechar carrinho no cerular */
 function toggleCarrinho() {
   if (carrinho.style.display === "flex" || carrinho.style.display === "block") {
     carrinho.style.display = "none";
@@ -73,7 +73,7 @@ function toggleCarrinho() {
   }
 }
 
-/* === Atualizar badge do botão flutuante === */
+/*atualizar badge do botão flutuante*/
 function atualizarBadge() {
   if (!btnCarrinho) return;
   const qtdItens = itensCarrinho.children.length;
