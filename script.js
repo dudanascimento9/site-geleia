@@ -36,14 +36,12 @@ function adicionarCarrinho(produto, preco) {
   atualizarBadge();
 }
 
-
 function limparCarrinho() {
   itensCarrinho.innerHTML = "";
   total = 0;
   totalElement.textContent = total;
   atualizarBadge();
 }
-
 
 function concluirPedido() {
   if (total === 0) {
@@ -53,15 +51,12 @@ function concluirPedido() {
   telaConfirmacao.style.display = "flex";
   limparCarrinho();
 
-
-  carrinho.style.display = "block"; 
+  carrinho.style.display = "block";
 }
-
 
 function fecharConfirmacao() {
   telaConfirmacao.style.display = "none";
 }
-
 
 function toggleCarrinho() {
   if (carrinho.style.display === "flex" || carrinho.style.display === "block") {
@@ -70,7 +65,6 @@ function toggleCarrinho() {
     carrinho.style.display = "block";
   }
 }
-
 
 function atualizarBadge() {
   if (!btnCarrinho) return;

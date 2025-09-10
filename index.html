@@ -13,7 +13,6 @@
       <p id="p-header">As melhores geleias artesanais da Bahia!</p>
     </header>
 
-    <!-- Lista de produtos -->
     <section class="menu">
       <div class="produto">
         <img
@@ -35,8 +34,13 @@
           alt="Geleia de Laranja com Pimenta"
         />
         <h2 class="font-carrinho">Geleia de Laranja com Pimenta</h2>
-        <p>Ingredientes: suco de laranja, açúcar cristal, limão, pimenta dedo-de-moça e pectina em pó.</p>
-        <button onclick="adicionarCarrinho('Geleia de Laranja com Pimenta', 18)">
+        <p>
+          Ingredientes: suco de laranja, açúcar cristal, limão, pimenta
+          dedo-de-moça e pectina em pó.
+        </p>
+        <button
+          onclick="adicionarCarrinho('Geleia de Laranja com Pimenta', 18)"
+        >
           Adicionar - R$ 18,00
         </button>
       </div>
@@ -55,7 +59,6 @@
       </div>
     </section>
 
-    <!-- Carrinho -->
     <aside id="carrinho">
       <h2 class="font-carrinho">🛒 Carrinho</h2>
       <div id="itens"></div>
@@ -68,10 +71,8 @@
       </button>
     </aside>
 
-    <!-- Botão flutuante no celular -->
     <button id="btn-carrinho-flutuante" onclick="toggleCarrinho()">🛒</button>
 
-    <!-- Tela de confirmação -->
     <div id="pedido-confirmado">
       <div class="conteudo">
         <h2>✅ Pedido realizado com sucesso!</h2>
@@ -80,11 +81,14 @@
       </div>
     </div>
 
-        <!-- Sobre a Empresa -->
     <section class="sobre">
-      <img src="imagens/logo-naturelle.jpeg" alt="Logo La Naturelle" class="logo-empresa" />
+      <img
+        src="imagens/logo-naturelle.jpeg"
+        alt="Logo La Naturelle"
+        class="logo-empresa"
+      />
       <div class="sobre-texto">
-        <h2 style=" font-family: nexa">Sobre a La Naturelle</h2>
+        <h2 style="font-family: nexa">Sobre a La Naturelle</h2>
         <p>
           A <strong>La Naturelle</strong> nasceu da união de sete amigos com o
           propósito de oferecer alimentos <strong>saudáveis e naturais</strong>,
@@ -102,7 +106,6 @@
       </div>
     </section>
 
-        <!-- Rodapé -->
     <footer class="footer">
       <div class="footer-conteudo">
         <div class="footer-info">
@@ -118,7 +121,6 @@
         </div>
       </div>
     </footer>
-
 
     <script src="script.js"></script>
   </body>
